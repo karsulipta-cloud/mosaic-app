@@ -22,7 +22,7 @@ const NEED_LABELS = {
   dosage_confusion: 'Dosage Clarity',
 };
 const NEED_TAGLINES = {
-  personalization_demand: 'One-size fits none — customers crave tailored solutions',
+  personalization_demand: 'One-size fits none, customers crave tailored solutions',
   allergen_labeling: 'Undisclosed allergens erode trust and repeat purchase',
   result_tracking: 'No visible progress = no loyalty',
   skin_type_mismatch: 'Wrong formulation causes harm and churn',
