@@ -841,12 +841,13 @@ input[type=range]::-moz-range-thumb {
   transform: translateX(-50%);
   background: var(--ink2);
   color: #fff;
-  font-size: 0.7rem;
-  line-height: 1.45;
-  padding: 0.6rem 0.9rem;
+  font-family: 'DM Mono', monospace; /* Changed to a clearer font */
+  font-size: 0.85rem; /* Increased size for readability */
+  line-height: 1.6;
+  padding: 0.8rem 1rem;
   border-radius: 10px;
   white-space: nowrap;
-  max-width: 260px;
+  max-width: 300px;
   white-space: normal;
   z-index: 10;
   pointer-events: none;
