@@ -1231,7 +1231,7 @@ function renderKPIs() {
     { label: 'Need Categories', value: ranked.length, sub: 'distinct gap types', cls: 'teal' },
     { label: 'Top Opportunity Score', value: topOpp.opportunityScore.toLocaleString(), sub: topOpp.label, cls: 'gold' },
     { label: 'Avg Competitor Rating', value: avgRating, sub: 'out of 5.0 stars', cls: '' },
-    { label: 'Most Exposed Brand', value: brandExposure[0].brand.split(' ')[0], sub: `${brandExposure[0].needMentions} need mentions`, cls: '' },
+    { label: 'Most Exposed Brand', value: brandExposure[0].brand, sub: `${brandExposure[0].needMentions} need mentions`, cls: '' },
   ];
   document.getElementById('kpiStrip').innerHTML = kpis.map(k => `
     <div class="kpi-card">
