@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NeedScope — Consumer Need-Gap Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-logo">NeedScope</div>
+  <div class="loader-tagline">Consumer Intelligence Platform</div>
+  <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+  <div class="loader-status" id="loaderStatus">Initialising data pipeline…</div>
+</div>
+
+<div id="app" style="display:none">
+<nav>
+  <div class="nav-brand">Need<span>Scope</span></div>
+  <div class="nav-meta" id="navMeta">Loading…</div>
+  <div class="nav-badge">D2C India · 2025</div>
+</nav>
+
+<div class="hero fade-up">
+  <div class="hero-eyebrow">Competitive Intelligence · Need-Gap Analysis</div>
+  <h1 class="hero-title">Where competitors <em>fail</em>,<br>your product wins.</h1>
+  <p class="hero-sub">6,000 verified reviews · 15 brands · 16 need categories. Ranked by opportunity score — frequency × frustration × validation.</p>
+</div>
+
+<div class="kpi-strip fade-up delay-1" id="kpiStrip"></div>
+
+<div class="section fade-up delay-2">
+  <div class="section-header">
+    <div class="section-title">🏆 #1 Product Recommendation</div>
+    <div class="section-note">Highest composite opportunity score</div>
+  </div>
+  <div id="recCard"></div>
+</div>
+
+<div class="section fade-up delay-3">
+  <div class="section-header">
+    <div class="section-title">Ranked Need-Gaps
+      <span class="method-info" data-tip="Opportunity Score = (mention_count × 10) + (avg_helpful_votes × 0.8) + ((5 − avg_rating) × 15). Higher = bigger gap.">?</span>
+    </div>
+    <div class="section-note">Sorted by opportunity score ↓</div>
+  </div>
+  <div class="opps-grid" id="oppsGrid"></div>
+</div>
+
+<div class="section fade-up delay-3">
+  <div class="section-header">
+    <div class="section-title">Market Intelligence</div>
+  </div>
+  <div class="chart-area">
+    <div class="chart-card">
+      <div class="chart-title">Brand Exposure to Top Needs</div>
+      <div id="brandBarChart" class="bar-chart"></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Need Category Distribution</div>
+      <div class="donut-wrap">
+        <svg class="donut-svg" id="donutSvg" width="160" height="160" viewBox="0 0 160 160"></svg>
+        <div class="donut-legend" id="donutLegend"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section fade-up">
+  <div class="section-header">
+    <div class="section-title">Brand × Need Heatmap</div>
+    <div class="section-note">Number of mentions per brand per need</div>
+  </div>
+  <div class="heatmap-wrap">
+    <table class="heatmap-table" id="heatmapTable"></table>
+  </div>
+</div>
+
+<div class="section reviews-section fade-up">
+  <div class="section-header">
+    <div class="section-title">Review Explorer</div>
+    <div class="section-note" id="reviewCount"></div>
+  </div>
+  <div class="filter-row" id="filterRow"></div>
+  <div class="reviews-table-wrap">
+    <table class="reviews-table">
+      <thead>
+        <tr>
+          <th>Brand</th>
+          <th>Product</th>
+          <th>Rating</th>
+          <th>Review</th>
+          <th>Unmet Needs</th>
+          <th>Helpful ↑</th>
+        </tr>
+      </thead>
+      <tbody id="reviewsTbody"></tbody>
+    </table>
+  </div>
+  <div class="pagination" id="pagination"></div>
+</div>
+
+<footer style="margin-top:2rem">
+  <div class="footer-brand">NeedScope</div>
+  <div class="footer-note">Built on 6,000 competitor reviews · 15 Indian D2C brands · Opportunity Score methodology</div>
+</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
